@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using SalesWebMVC.Models;
+using SalesWebMVC.Models.ViewModels;
 using SalesWebMVC.Services;
 
 namespace SalesWebMVC.Controllers
@@ -14,12 +15,14 @@ namespace SalesWebMVC.Controllers
     {
         private readonly SalesWebMvcContext _context;
         private readonly SellerService _sellerService;
+        private readonly DepartmentService _departmentService;
 
 
-        public SellersController(SalesWebMvcContext context, SellerService sellerService)
+        public SellersController(SalesWebMvcContext context, SellerService sellerService, DepartmentService departmentService)
         {
             _context = context;
             _sellerService = sellerService;
+            _departmentService = departmentService;
         }
 
         public IActionResult Index()
@@ -30,7 +33,9 @@ namespace SalesWebMVC.Controllers
 
         public IActionResult Create()
         {
-            return View();
+            var departments = _departmentService.FindAll();
+            var viewModel = new SellerFormViewModel { Departments = departments };
+            return View(viewModel);
         }
 
         [HttpPost]
@@ -41,6 +46,6 @@ namespace SalesWebMVC.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        
+
     }
 }
