@@ -1,4 +1,4 @@
-# Sales Web MVC
+# Sales Web MVC :globe_with_meridians:
 
 ***
 
@@ -15,4 +15,16 @@ Com esse projeto, pude ter uma noção básica sobre:
 O projeto foi feito em ASP.NET 2.1, mas já está sendo atualizado para a versão do ASP.NET 5.
 
 ---
+
+## Screenshots :camera:
+
+![Departments](./imgs/departments.png)
+
+![Sellers](./imgs/sellers.png)
+
+![Sales Records](./imgs/sales-records1.png)
+
+![Simple Search](./imgs/sales-records2.png)
+
+![Grouping Search](./imgs/sales-records3.png)
 
