@@ -1,7 +1,5 @@
 # Sales Web MVC :globe_with_meridians:
 
-***
-
 Este é um projeto que fiz ao final de um curso de C# na Udemy, do professor [Nélio Álves](https://www.udemy.com/user/nelio-alves/). Ele se trata basicamente de um site onde é possível fazer um "gerenciamento de loja" bem simplificado. É possível consultar vendedores, vendas e departamentos.
 
 Com esse projeto, pude ter uma noção básica sobre:
